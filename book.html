@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width">
+<title>JS Bin</title>
+<style id="jsbin-css">
+	.book {
+	  width: 250px;
+	  height:300px;
+	  background: #000;
+	  margin-top: 50px;
+	  margin-left: 250px;
+	  perspective: 1000px;
+	  color:#fff;
+
+	}
+
+	.cover  {
+	  width: 210px;
+	  height: 300px;
+	  left:40px;
+	  position: relative;
+	  transform: rotateY(-20deg) ;
+	  transform-style:preserve-3d;
+	  transform-origin:left;
+	  transition: all .6s;
+	}
+
+	.book:hover .cover {
+	  transform: rotateY(-180deg) ;
+	}
+
+	figure {
+	  margin: 0;
+	  position: absolute;
+	  width: 100%;
+	  height: 100%;
+	  backface-visibility:hidden;
+	  font-size:32px;
+	  display:flex;
+	  align-items:center;
+	  justify-content:center;
+	}
+
+	.front  {
+	  background: blue;
+	}
+
+	.back  {
+	  background: green;
+	  transform: rotateY(180deg);
+	}
+
+	.content {
+	  position: absolute;
+	  height: 100%;
+	  width: 100%;
+	  font-size:22px;
+	  left:5%;
+	  display:flex;
+	  align-items:center;
+	  justify-content:center;
+	}
+
+</style>
+</head>
+<body>
+
+   <!-- book -->
+	 <div class="book">
+		<div class="content"> 
+			<h3>Hi !! </h3>
+		</div>
+		<div class="cover"> 
+			<figure class="front"> <h1>Book</h1> </figure>
+			<figure class="back"></figure>
+		</div>
+	</div>
+   <!--/ book -->
+
+</body>
+</html>
